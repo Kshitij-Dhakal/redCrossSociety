@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listView = (ListView) findViewById(R.id.list_item);
+        GridView listView = (GridView) findViewById(R.id.list_item);
         final List<bloodGroup> bloodGroups = new ArrayList<>();
         bloodGroups.add(new bloodGroup("O Positive", "OP"));
         bloodGroups.add(new bloodGroup("O Negative", "ON"));
