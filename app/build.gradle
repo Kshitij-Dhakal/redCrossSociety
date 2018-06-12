@@ -2,12 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        Config {
-            keyAlias 'Test'
-            keyPassword '123456'
-            storeFile file('C:/Users/dhaka/Desktop/key.jks')
-            storePassword '123456'
-        }
     }
     compileSdkVersion 27
     defaultConfig {
@@ -17,16 +11,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.Config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.Config
         }
         debug {
-            signingConfig signingConfigs.Config
         }
     }
     productFlavors {
